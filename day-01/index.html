@@ -4,8 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn Day - 01</title>
+    <!-- Option 1 -->
+    <script src="./index.js"></script>
+    <!-- Option 2 -->
+    <script async src="./index.js"></script>
+    <!-- Option 3 -->
+    <script defer src="./index.js"></script>
   </head>
   <body>
     <h1>40 Days Of JavaScript</h1>
+    <div id="someId"></div>
+    <div id="divId"></div>
+    <!-- Option 4 -->
+    <script src="./index.js"></script>
+    <!-- Option 5 -->
+    <script>
+      console.log("Hello Body");
+      const devElement = document.getElementById("divId");
+      console.log(devElement); // <div id="divId">Hello Text Body</div>
+      devElement.innerText = "Hello Text Body";
+      console.log(devElement.innerText); // Hello Text Body
+    </script>
   </body>
 </html>
