@@ -83,3 +83,21 @@ function highLight() {
     element.style.backgroundColor = "yellow";
   });
 }
+
+// Mini Project - 2
+
+function filterList() {
+  const inputElem = document.getElementById("inputText");
+  const inputValue = inputElem.value;
+  console.log(inputValue);
+
+  const elements = document.querySelectorAll("ul#itemList li");
+  console.log(elements);
+  elements.forEach((element) => {
+    element.style.display = element.innerText
+      .toLowerCase()
+      .includes(inputValue.toLowerCase())
+      ? "block"
+      : "none";
+  });
+}
