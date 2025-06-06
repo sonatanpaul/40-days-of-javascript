@@ -65,3 +65,21 @@ console.log(hOne);
 let liveItems = document.getElementsByClassName("item"); // HTMLCollection (live)
 let staticItems = document.querySelectorAll(".item"); // NodeList (not live)
 
+// Mini Project - 01
+
+function highLight() {
+  console.log("About to High Light to Text ...");
+
+  const headingElem = document.getElementById("heading");
+  headingElem.style.backgroundColor = "yellow";
+  headingElem.style.padding = "2px";
+  document.querySelector(".success").style.backgroundColor = "blue";
+  document.querySelector("p.amar").style = "background-color:blue; color:white";
+
+  const elements = document.querySelectorAll("p.info");
+  console.log(elements);
+  elements.forEach((element) => {
+    console.log(element);
+    element.style.backgroundColor = "yellow";
+  });
+}
