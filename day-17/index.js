@@ -16,4 +16,52 @@ console.log(document);
 // 05.Attribute - Represent the attribute of a node. // <img src="/" alt= "some image">
 // 06.NameNodeMap - A collection of attribute.
 
+// Accessing DOM:
+
+// 1.getElementById(idName)
+// 2. getElementsByClassName(className)
+// 3. getElementsByTagName(tagName)
+// 4. querySelector(cssSelector)
+// 5. querySelectorAll(cssSelector)
+
+// getElementById()
+const titleElem = document.getElementById("heading");
+console.log(titleElem);
+
+// getElementsByClassName()
+const infoElems = document.getElementsByClassName("info");
+console.log(infoElems);
+console.log(infoElems[0], infoElems[1], infoElems[2]); // access index
+[...infoElems].forEach((element) => console.log(element)); // access for looping
+// Note : getElementsByClassName() return HTML Collection
+
+// getElementsByTagName()
+const pTagElems = document.getElementsByTagName("p");
+console.log(pTagElems);
+[...pTagElems].forEach((element) => {
+  console.log(element);
+});
+// getElementsByTagName() return HTML Collection
+
+// Selctors Method - Query Selctor and Query Selctor ALl
+
+// querySelector()
+const para = document.querySelector("p.info");
+console.log(para);
+// Note : quarySelector return always first element
+
+// querySelectorAll()
+const paras = document.querySelectorAll("p.info");
+console.log(paras);
+// Note : querySelectorAll return css selector all matching elemet and return NodeList
+
+const pElem = document.querySelector(".info");
+console.log(pElem);
+
+// Note : if you access id element then you use #idName
+const hOne = document.querySelector("#heading");
+console.log(hOne);
+
+let liveItems = document.getElementsByClassName("item"); // HTMLCollection (live)
+let staticItems = document.querySelectorAll(".item"); // NodeList (not live)
 
