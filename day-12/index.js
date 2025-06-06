@@ -82,3 +82,19 @@ console.log(typeof []); // object but called array
   console.log(user["user-name"]); // Sonatan Paul
   console.log(user["user age"]); // 30
 }
+
+{
+  // delete object property
+
+  const user = {
+    name: "Sonatan",
+    age: 26,
+    country: "Bangladesh",
+  };
+  console.log(user); // {name: 'Sonatan', age: 26, country: 'Bangladesh'}
+  // delete country property
+  delete user.country;
+  console.log(user); // {name: 'Sonatan', age: 26}
+  delete user["age"];
+  console.log(user); // {name: 'Sonatan'}
+}
