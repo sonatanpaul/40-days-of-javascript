@@ -184,3 +184,17 @@ document.body.insertBefore(span, h1);
   divElem.classList.toggle("test"); // false
   divElem.classList.toggle("test"); // true
 }
+
+{
+  // Controlling Visibilities
+  const divElem = document.getElementById("main");
+  // divElem.style.display = "none";
+  // divElem.style.visibility = "hidden";
+//   divElem.style.opacity = "0.2";
+}
+
+
+{
+    // Project - 01 
+    
+}
