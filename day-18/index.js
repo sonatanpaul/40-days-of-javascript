@@ -16,3 +16,20 @@ const divElem = document.createElement("div");
 divElem.innerText = "Hello World";
 document.body.appendChild(divElem);
 console.log(divElem); // HTMLDivElement
+
+// Inserting Elements :
+
+// Inserting Before :
+const spanElem = document.createElement("span");
+spanElem.innerText = " I am Span";
+
+const p = document.querySelector("p");
+document.body.insertBefore(spanElem, p);
+console.log(spanElem); // HTMLSpanElement
+
+// Another Example :
+const span = document.createElement("span");
+span.innerText = "Yes, I Do it";
+
+const h1 = document.querySelector("h1");
+document.body.insertBefore(span, h1);
