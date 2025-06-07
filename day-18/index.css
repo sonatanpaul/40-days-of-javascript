@@ -1,0 +1,12 @@
+.main-class {
+  background-color: teal;
+  border: 2px solid green;
+  color: white;
+}
+
+.secendory-class {
+  background-color: green;
+  border: 1px solid blue;
+  color: white;
+  border-radius: 5px;
+}

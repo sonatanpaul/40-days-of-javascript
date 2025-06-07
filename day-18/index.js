@@ -144,3 +144,43 @@ document.body.insertBefore(span, h1);
 
   // note : nextSibling - previousSibling both return nodeList
 }
+
+{
+  // Manipulating Styles
+  const pElem = document.getElementById("p-id");
+  console.log(pElem.style);
+  pElem.style.backgroundColor = "pink";
+}
+
+{
+  // Manipulating Classes :
+  const divElem = document.getElementById("main");
+  console.log(divElem.className); // main-class
+  //   divElem.className = "secendory-class ";
+  console.log(divElem.className); // secendory-class
+}
+
+{
+  // ClassList :
+  const divElem = document.getElementById("main");
+  console.log(divElem.className); // secendory-class
+  // add class list;
+  divElem.classList.add("test");
+
+  // remove classlist
+  divElem.classList.remove("layout");
+
+  // replace classlist
+  divElem.classList.replace("main-class", "secendory-class");
+
+  // class has or not
+  console.log("Does it have test", divElem.classList.contains("test"));
+  console.log(
+    "Does it have main-class",
+    divElem.classList.contains("main-class")
+  );
+
+  // toggle
+  divElem.classList.toggle("test"); // false
+  divElem.classList.toggle("test"); // true
+}
