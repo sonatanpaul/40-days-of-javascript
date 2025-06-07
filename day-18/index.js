@@ -123,4 +123,24 @@ document.body.insertBefore(span, h1);
   // access span parent p element and p parent access div element
   console.log("ParentNode", span.parentNode.parentNode); // span > p > div
   console.log("ParentElement", span.parentElement.parentElement); // span > p > div
+
+  // children / childNodes
+  const mainElem = document.getElementById("main");
+  //   console.log(mainElem);
+  console.log("Children", mainElem.children); // retrun html collection
+  console.log("childNodes", mainElem.childNodes); // return NodeList
+
+  // nextSibling / nextSiblingElement:
+
+  const h1Elem = document.getElementById("something-id2");
+  console.log(h1Elem); // <p id="something-id2">Something More</p>
+  console.log("nextSibling", h1Elem.nextSibling); // return text
+  console.log("nextElementSibling", h1Elem.nextElementSibling); // return <p id="something-id3">Something Even More</p>
+
+  // previousSibling /  previousElementSibling:
+  console.log(h1Elem); // <p id="something-id2">Something More</p>
+  console.log("previousSibling", h1Elem.previousSibling); // return #text
+  console.log("previousElementSibling", h1Elem.previousElementSibling); // return <h1 id="something-id">Something</h1>
+
+  // note : nextSibling - previousSibling both return nodeList
 }
