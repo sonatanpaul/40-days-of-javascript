@@ -87,5 +87,40 @@ document.body.insertBefore(span, h1);
 
   //   replace Element
   const h2 = document.querySelector("h2");
-//   list.replaceChildren(h2);
+  //   list.replaceChildren(h2);
+}
+
+{
+  // Read, Write, and Remove Attributes
+
+  const imgElem = document.querySelector("img");
+  console.log(imgElem);
+
+  // Read Attribute
+  console.log(imgElem.getAttribute("alt"));
+  // Write / Update Attribute
+  imgElem.setAttribute("alt", "avatar image");
+
+  //Remove Attribute
+  imgElem.removeAttribute("width");
+
+  // check attribute true or false
+  imgElem.hasAttribute("alt"); //  true
+  imgElem.hasAttribute("width"); // false
+}
+
+{
+  // Tavarsing / Navigating DOM
+
+  // parentNode / parentElement
+  const span = document.getElementById("text");
+  // console.log(span);
+
+  //   access span parent  p element
+  console.log("ParentNode", span.parentNode); //  span > p
+  console.log("ParentNode", span.parentElement); // span > p
+
+  // access span parent p element and p parent access div element
+  console.log("ParentNode", span.parentNode.parentNode); // span > p > div
+  console.log("ParentElement", span.parentElement.parentElement); // span > p > div
 }
