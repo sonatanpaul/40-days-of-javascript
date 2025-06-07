@@ -28,8 +28,22 @@ document.body.insertBefore(spanElem, p);
 console.log(spanElem); // HTMLSpanElement
 
 // Another Example :
+// create element
 const span = document.createElement("span");
 span.innerText = "Yes, I Do it";
 
+// insert element
 const h1 = document.querySelector("h1");
 document.body.insertBefore(span, h1);
+
+// Inserting After :
+{
+  // create element :
+  const p = document.createElement("p");
+  p.innerText = "Hello World After";
+
+  // insert element
+  const h1 = document.querySelector("h1");
+  document.body.insertBefore(p, null); // null means last elment
+  document.body.insertBefore(p, h1.nextElementSibling); // insert after h1 tag
+}
