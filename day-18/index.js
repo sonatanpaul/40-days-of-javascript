@@ -65,3 +65,27 @@ document.body.insertBefore(span, h1);
   console.log("InnerText", div.innerText); // not visiblity
   console.log("TextContent", div.textContent); // visibilty
 }
+
+{
+  // Remove Elements
+  //   example - 1
+  const deleteItem = document.getElementById("removeMe");
+  deleteItem.remove(); // removeitem
+  console.log(deleteItem);
+
+  // example-2
+  const list = document.getElementById("myList");
+  const firstElem = list.children[0];
+  list.removeChild(firstElem); // first element is delete
+  console.log(list.children); // [li, li, li, li, li]
+
+  //   remove all element
+
+  //   list.innerText = "";
+  //   list.textContent = "";
+  // list.replaceChildren();
+
+  //   replace Element
+  const h2 = document.querySelector("h2");
+//   list.replaceChildren(h2);
+}
