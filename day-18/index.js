@@ -47,3 +47,21 @@ document.body.insertBefore(span, h1);
   document.body.insertBefore(p, null); // null means last elment
   document.body.insertBefore(p, h1.nextElementSibling); // insert after h1 tag
 }
+
+{
+  // Modifying Content:
+
+  // innerText :
+  const h2 = document.querySelector("h2");
+  h2.innerText = "Eid Mubarak Everyone ?";
+
+  // InnerHTML :
+  const h1 = document.querySelector("h1");
+  h1.innerHTML = `Learn Today <u>DOM</u> Manupalutaion`;
+  console.log(h1);
+
+  // TextContent
+  const div = document.querySelector("div");
+  console.log("InnerText", div.innerText); // not visiblity
+  console.log("TextContent", div.textContent); // visibilty
+}
