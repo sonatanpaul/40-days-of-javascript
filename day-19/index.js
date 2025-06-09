@@ -46,3 +46,22 @@ myBtnElem.onclick = buttonClickAgain;
   // removeEventListener:
   eventBtnElem.removeEventListener("click", handleClick);
 }
+
+// Handling Multiple Listeners
+const multiCountElem = document.getElementById("multiCount");
+
+let counter = 0;
+function handleCount() {
+  console.log(`Counter : ${counter}`);
+  counter++;
+}
+
+function greetMe() {
+  console.log("Thank You");
+}
+
+multiCountElem.addEventListener("click", handleCount);
+multiCountElem.addEventListener("click", greetMe);
+
+// remove event listeners
+multiCountElem.removeEventListener("click", handleCount);
