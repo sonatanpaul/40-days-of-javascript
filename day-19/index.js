@@ -65,3 +65,18 @@ multiCountElem.addEventListener("click", greetMe);
 
 // remove event listeners
 multiCountElem.removeEventListener("click", handleCount);
+
+// Event Object ;
+const inputElem = document.getElementById("search-id");
+
+function handleChange(event) {
+  console.log(event);
+  console.log(event.target);
+  console.log(event.target.name);
+  console.log(event.target.value);
+  console.log(event.type);
+  console.log(event.currentTarget);
+  console.log(this);
+}
+
+inputElem.addEventListener("change", handleChange);
