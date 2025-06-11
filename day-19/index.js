@@ -80,3 +80,22 @@ function handleChange(event) {
 }
 
 inputElem.addEventListener("change", handleChange);
+
+// Event Bubbling,Capturing, and Delegation
+
+// Event Bubling
+
+// In event bubbling, the event starts from the target element and bubbles up through its ancestors.
+// The Flow is : Child -> Parent -> Grandparent -> Document.
+
+document.getElementById("grandparent").addEventListener("click", () => {
+  console.log("Grandparent Click");
+});
+
+document.getElementById("parent").addEventListener("click", () => {
+  console.log("Parent Click");
+});
+
+document.getElementById("child").addEventListener("click", () => {
+  console.log("Child");
+});
